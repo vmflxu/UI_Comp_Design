@@ -1,24 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Custom } from "./style/newStyle";
+import { Buttons } from "./style/style";
+import { btn } from "./style/styleDef";
+import { color, typo } from "./style/value_def/ui_values";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Buttons.Default>기존 방식</Buttons.Default><br /><br />
+      <Custom.Button css={btn.default}>새로운 방식</Custom.Button><br />
+      <Custom.Span css={typo.HEADING_1 + `color:${color.RED}`}>타이핑</Custom.Span>
     </div>
   );
 }
